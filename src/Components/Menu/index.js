@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Container, ImageUser, UserProfile, Link, LinkMenu, Divider, Nav, Logout } from './styles';
 import Logo from '../../assets/logo-web.png';
-import User from '../../assets/user.png';
 import UserTest from '../../assets/user-teste.jfif';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components'
@@ -32,7 +31,7 @@ function FixedMenu({ toggleTheme }) {
       />
       <UserProfile>
         <ImageUser src={UserTest} alt="Foto do perfil do usuário" />
-        <Link href="#">Otávio Cleyderman</Link>
+        <Link style={{textDecoration: 'none'}}>Otávio Cleyderman</Link>
       </UserProfile>
       <SearchBar />
       <Divider />

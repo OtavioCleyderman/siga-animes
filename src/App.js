@@ -3,21 +3,25 @@ import GlobalStyle from './styles/global'
 import { ThemeProvider } from 'styled-components'
 import light from './styles/themes/light'
 import dark from './styles/themes/dark'
-import Login from './Pages/Login'
+
+
 import Register from './Pages/Register'
 import usePersistedState from './utils/usePersistedState'
 import FixedMenu from './Components/Menu'
 import styled from 'styled-components'
 import Home from './Pages/Home'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 const ContainerApp = styled.div`
   display: flex;
+  
 `;
 
 const ContainerPages = styled.div`
   display: flex;
+  width: 100%;
 `;
 
 
@@ -31,17 +35,17 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <ContainerApp>
-        <Router> {/* Inicia a região onde pode haver troca dinâmica de elementos */}
+        <BrowserRouter> {/* Inicia a região onde pode haver troca dinâmica de elementos */}
           <GlobalStyle />
           <FixedMenu toggleTheme={toggleTheme} />
           <ContainerPages id="routed" >
             <Switch> {/* Determina qual elemento será exibido, de acordo com a rota */}
 
-              <Route path="/home"> {/* Inserindo a rota */}
+              <Route path="/home" exact > {/* Inserindo a rota */}
                 <Home />
               </Route>
 
-              <Route path="/seguindo"> {/* Inserindo a rota */}
+              <Route path="/seguindo" exact> {/* Inserindo a rota */}
                 <Register />
               </Route>
 
@@ -53,7 +57,7 @@ const App = () => {
             </Switch>
           </ContainerPages>
 
-        </Router>
+        </BrowserRouter>
       </ContainerApp>
     </ThemeProvider >
   );

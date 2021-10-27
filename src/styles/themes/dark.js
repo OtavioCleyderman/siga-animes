@@ -6,6 +6,7 @@ const dark = {
     secundary: '#1536F1ff',
 
     background: '#222',
+    backgroundButton: '#333',
     bgMenu: '#333',
     bgSearchBar: '#333',
     borderSearchBar: '#444',

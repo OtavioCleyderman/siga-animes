@@ -6,6 +6,7 @@ const light = {
     secundary: '#7D22DEff',
 
     background: '#fff',
+    backgroundButton: '#f5f5f5',
     bgMenu: '#f5f5f5',
     bgSearchBar: '#fff',
     borderSearchBar: '#000',

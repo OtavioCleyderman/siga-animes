@@ -19,6 +19,8 @@ export const Input = styled.input`
   border: none;
   color: ${props => props.theme.colors.text};
   background: ${props => props.theme.colors.bgSearchBar};
+
+  outline: none;
   
 `;
 
@@ -37,4 +39,9 @@ export const ContainerSearch = styled.div`
   padding: .5rem;
   background: ${props => props.theme.colors.bgSearchBar};
   border: 1px solid ${props => props.theme.colors.borderSearchBar};
+
+  // deixar a borda do campo pesquisa em evidencia - forma temporaria
+  &:hover {
+    border: 2px solid ${props => props.theme.colors.primary};;
+  }
 `;

@@ -1,11 +1,21 @@
 import React from 'react';
-import { Container } from './styles';
+import { Container, SubMenuHome, ContentHome, Button, Divider } from './styles';
+import  CarouselPages from '../../Components/Carousel'
 
 function Home() {
   return (
     <Container>
-
-      <h1>Hello world!!!</h1>
+      <CarouselPages />
+      <SubMenuHome>
+        <Button>Mais vistos</Button>
+        <Button>Os melhores</Button>
+        <Button>Para descobrir</Button>
+        <Button>Lançamentos</Button>
+      </SubMenuHome>
+      <ContentHome>
+        Mais vistos
+        <Divider />
+      </ContentHome>
     </Container>
   );
 }
